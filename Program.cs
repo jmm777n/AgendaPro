@@ -65,14 +65,14 @@ namespace AgendaPro
                         break;
                 }
 
-                if (opcion != "f")
+                if (opcion != "S")
                 {
-                    Console.WriteLine("\nPresione una tecla para continuar...");
+                    Console.WriteLine("\nPresione cualquier tecla para continuar...");
                     Console.ReadKey();
                     Console.Clear();
                 }
 
-            } while (opcion != "f");
+            } while (opcion != "S");
         }
 
         
