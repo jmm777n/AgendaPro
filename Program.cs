@@ -42,22 +42,22 @@ namespace AgendaPro
 
                 switch (opcion)
                 {
-                    case "a":
+                    case "1":
                         RegistrarPersona();
                         break;
-                    case "b":
+                    case "2":
                         ListarPersonas();
                         break;
-                    case "c":
+                    case "3":
                         CrearCita();
                         break;
-                    case "d":
+                    case "4":
                         ListarCitasPorPersona();
                         break;
-                    case "e":
+                    case "5":
                         ListarTodasLasCitas();
                         break;
-                    case "f":
+                    case "S":
                         Console.WriteLine("Saliendo... ¡Hasta luego!");
                         break;
                     default:
@@ -79,12 +79,12 @@ namespace AgendaPro
         static void MostrarMenu()
         {
             Console.WriteLine("==== AgendaPro - Gestión de Personas y Citas ====");
-            Console.WriteLine("a) Registrar persona (Id único)");
-            Console.WriteLine("b) Listar personas");
-            Console.WriteLine("c) Crear cita para una persona");
-            Console.WriteLine("d) Listar citas por PersonaId");
-            Console.WriteLine("e) Mostrar todas las citas");
-            Console.WriteLine("f) Salir");
+            Console.WriteLine("1) Registrar persona (Id único)");
+            Console.WriteLine("2) Listar personas");
+            Console.WriteLine("3) Crear cita para una persona");
+            Console.WriteLine("4) Listar citas por PersonaId");
+            Console.WriteLine("5) Mostrar todas las citas");
+            Console.WriteLine("S) Salir");
             Console.Write("Seleccione una opción: ");
         }
 
