@@ -75,7 +75,7 @@ namespace AgendaPro
             } while (opcion != "f");
         }
 
-        // ------------------ Menú ------------------
+        
         static void MostrarMenu()
         {
             Console.WriteLine("==== AgendaPro - Gestión de Personas y Citas ====");
@@ -88,7 +88,7 @@ namespace AgendaPro
             Console.Write("Seleccione una opción: ");
         }
 
-        // ------------------ Opciones ------------------
+        
         static void RegistrarPersona()
         {
             Console.WriteLine("\n-- Registrar persona --");
@@ -97,7 +97,7 @@ namespace AgendaPro
 
             if (personas.Exists(p => p.Id == id))
             {
-                Console.WriteLine("❌ Ya existe una persona con ese Id. Intente nuevamente.");
+                Console.WriteLine(" Ya existe una persona con ese Id. Intente nuevamente.");
                 return;
             }
 
@@ -105,7 +105,7 @@ namespace AgendaPro
             string telefono = LeerTextoNoVacio("Teléfono: ");
 
             personas.Add(new Persona(id, nombre, telefono));
-            Console.WriteLine("✅ Persona registrada correctamente.");
+            Console.WriteLine(" Persona registrada correctamente.");
         }
 
         static void ListarPersonas()
@@ -133,7 +133,7 @@ namespace AgendaPro
             var persona = personas.Find(p => p.Id == personaId);
             if (persona == null)
             {
-                Console.WriteLine("❌ No existe una persona con ese Id.");
+                Console.WriteLine(" No existe una persona con ese Id.");
                 return;
             }
 
@@ -147,7 +147,7 @@ namespace AgendaPro
                 Descripcion = descripcion
             });
 
-            Console.WriteLine($"✅ Cita creada para {persona.Nombre} en {fecha}.");
+            Console.WriteLine($" Cita creada para {persona.Nombre} en {fecha}.");
         }
 
         static void ListarCitasPorPersona()
@@ -158,7 +158,7 @@ namespace AgendaPro
             var persona = personas.Find(p => p.Id == personaId);
             if (persona == null)
             {
-                Console.WriteLine("❌ No existe una persona con ese Id.");
+                Console.WriteLine(" No existe una persona con ese Id.");
                 return;
             }
 
@@ -196,7 +196,7 @@ namespace AgendaPro
                     c.Descripcion);
         }
 
-        // ------------------ Helpers de entrada ------------------
+        
         static int LeerEntero(string prompt)
         {
             while (true)
@@ -229,7 +229,7 @@ namespace AgendaPro
                 {
                     if (texto is null) throw new FormatException();
 
-                    // Acepta: "yyyy-MM-dd HH:mm", "yyyy/MM/dd HH:mm", y formatos locales
+                    
                     var formatos = new[]
                     {
                         "yyyy-MM-dd HH:mm", "yyyy/MM/dd HH:mm",
